@@ -262,6 +262,8 @@ public class SchedulerSimulation {
             // Increment context switch counter when a new process starts running
             contextSwitchCount++;
             
+             // Display total number of context switches
+             System.out.println("Total context switches: " + contextSwitchCount);
             // Start the thread, which will run the process for one time quantum
             currentThread.start();
             
@@ -322,8 +324,7 @@ public class SchedulerSimulation {
                           " │ Burst time: " + Colors.YELLOW + process.getBurstTime() + "ms" + 
                           Colors.RESET);
         
-        // Display total number of context switches
-        System.out.println("Total context switches: " + contextSwitchCount);
+       
         int turnaroundTime = process.getWaitingTime() + process.getBurstTime();//to find the turnaround time befor print it 
         // Print the (Process Name, Burst Time, Waiting Time and Turnaround Time (Waiting + Burst)) for this process
         System.out.println(
