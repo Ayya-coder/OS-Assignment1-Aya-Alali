@@ -33,7 +33,7 @@
 | **Student ID** | 445052784 |
 | **University Email** | 445052784@std.psau.edu.sa |
 | **GitHub Username** | Ayya-coder |
-| **Repository Link** | [Paste your repository link here] |
+| **Repository Link** | https://github.com/Ayya-coder/OS-Assignment1-Aya-Alali/tree/main |
  
 ---
 
@@ -129,29 +129,38 @@
 
 ## Your Development Log
 
-### Entry 1 - [Date and Time]
-**What I did**:
+### Entry 1 - [September 27 2026, 9:00 PM]
+**What I did**: Forked the repository and set up my ID (445052784)
 
-**Details**:
+**Details**: 1- I created my GitHub account using my university email.
+2- I forked the repository and renamed it with my own name.
+3- I changed the student ID to my real university number.
+4- I saved the changes and made a commit.
 
-**Challenges**:
+**Challenges**: I didn’t have a GitHub account before, and I didn’t know how to fork a repository at first
 
-**Solution**:
+**Solution**: I created my account and watched a short video about how to fork a repository, and it turned out to be really simple.
 
-**Time spent**:
+**Time spent**: around 30 minutes.
 
 ---
 
-### Entry 2 - [Date and Time]
-**What I did**:
+### Entry 2 - [September 28 2026, 10:30 AM]
+**What I did**: I worked on Part 2 of the assignment (Modifying SchedulerSimulation.java) 
 
-**Details**:
+**Details**: 1- I generated random processes, added them to the ready queue, and made sure each one ran with a random quantum.
+2- I counted the context switches, and printed it in the end of every process. 
+3- I calculated the waiting time and turnaround time, and printed a final report for the processes in the end .
+The simulation ran correctly and all processes completed without errors.
 
-**Challenges**:
+**Challenges**: I had to install VS Code to test my code and make sure the output was correct.
+After that, I realized I also needed the JDK, and I didn’t know that at first.
+I also wasn’t familiar with connecting VS Code to GitHub, so I wasn’t sure how to test my code after every change.
 
-**Solution**:
+**Solution**: I installed VS Code and then downloaded the JDK so I could run the project properly. 
+After that, I linked my VS Code with my GitHub account, which made it easy to test the code step by step and keep everything updated.
 
-**Time spent**:
+**Time spent**: 10 hours
 
 ---
 
