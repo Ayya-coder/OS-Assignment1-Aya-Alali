@@ -33,7 +33,7 @@ class Process implements Runnable {
     private int waitingTime = 0; // Total waiting time of the process in milliseconds
     
     // Constructor to initialize the process with name, burst time, and time quantum and also our priority
-    public Process(String name, int burstTime, int timeQuantum,int priority ) {
+    public Process(String name, int burstTime, int timeQuantum ) {
         this.name = name;
         this.burstTime = burstTime;
         this.timeQuantum = timeQuantum;
@@ -126,6 +126,10 @@ class Process implements Runnable {
             System.out.println(Colors.RED + "  ✗ " + name + " was interrupted." + Colors.RESET);
         }
     }
+    
+public void addWaitingTime(int amount) {
+    this.waitingTime += amount;
+}
 
     // Getter methods for process name, burst time, and remaining time
     public String getName() {
@@ -252,7 +256,7 @@ public class SchedulerSimulation {
             // Increase waiting time for all processes still in the ready queue
            for (Thread t : processQueue) {
             Process p = processMap.get(t);
-            p.waitingTime += timeQuantum;   // Add one time quantum to waiting time
+            p.addWaitingTime(timeQuantum);    // Add one time quantum to waiting time
             }
             
             // Increment context switch counter when a new process starts running
