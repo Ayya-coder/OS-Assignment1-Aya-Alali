@@ -291,6 +291,17 @@ public class SchedulerSimulation {
                     process.runToCompletion(); // Run until the process completes
                 }
             }
+int turnaroundTime = process.getWaitingTime() + process.getBurstTime(); //to find the turnaround time befor print it
+// Print the (Process Name, Burst Time, Waiting Time and Turnaround Time (Waiting + Burst)) for this process
+System.out.println(
+    "Process: " + process.getName() +
+    " | Burst: " + process.getBurstTime() + "ms" +
+    " | Waiting: " + process.getWaitingTime() + "ms" +
+    " | Turnaround: " + turnaroundTime + "ms"
+);
+
+System.out.println("Final report generated at: " + System.currentTimeMillis() + " ms");
+
         }
         
         // End of the scheduler simulation
@@ -324,14 +335,5 @@ public class SchedulerSimulation {
                           " │ Burst time: " + Colors.YELLOW + process.getBurstTime() + "ms" + 
                           Colors.RESET);
         
-       
-        int turnaroundTime = process.getWaitingTime() + process.getBurstTime();//to find the turnaround time befor print it 
-        // Print the (Process Name, Burst Time, Waiting Time and Turnaround Time (Waiting + Burst)) for this process
-        System.out.println(
-             "Process: " + process.getName() +
-             " | Burst: " + process.getBurstTime() + "ms" +
-             " | Waiting: " + process.getWaitingTime() + "ms" +
-             " | Turnaround: " + turnaroundTime + "ms");
-        System.out.println("Final report generated at: " + System.currentTimeMillis() + " ms");
     }
 }
