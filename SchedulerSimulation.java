@@ -29,13 +29,16 @@ class Process implements Runnable {
     private int burstTime; // Total time the process requires to complete (in milliseconds)
     private int timeQuantum; // Time slice (time quantum) allowed per CPU access (in milliseconds)
     private int remainingTime; // Time left for the process to finish its execution
-
-    // Constructor to initialize the process with name, burst time, and time quantum
-    public Process(String name, int burstTime, int timeQuantum) {
+    private int priority; // Priority level of the process (1 = lowest, 10 = highest)
+    private int waitingTime = 0; // Total waiting time of the process in milliseconds
+    
+    // Constructor to initialize the process with name, burst time, and time quantum and also our priority
+    public Process(String name, int burstTime, int timeQuantum,int priority ) {
         this.name = name;
         this.burstTime = burstTime;
         this.timeQuantum = timeQuantum;
         this.remainingTime = burstTime; // Initially, remaining time is equal to the burst time
+        this.priority=(int)(Math.random()*10)+1; // Assign a random priority between 1 and 10
     }
 
     // This method will be called when the thread for this process is started
@@ -136,6 +139,14 @@ class Process implements Runnable {
     public int getRemainingTime() {
         return remainingTime;
     }
+    // Returns the priority value assigned to this process
+    public int getPriority(){
+        return priority;
+    }
+    // Returns the total waiting time of the process
+   public int getWaitingTime() {
+       return waitingTime;
+   }
 
     // Check if the process has finished (i.e., no remaining time)
     public boolean isFinished() {
@@ -144,6 +155,8 @@ class Process implements Runnable {
 }
 
 public class SchedulerSimulation {
+     // Counts how many context switches occurred during the simulation
+    private static int contextSwitchCount = 0;
     public static void main(String[] args) {
         // ⚠️ IMPORTANT: Put your student ID here to seed the random number generator
         // This makes your output unique to you - DO NOT forget to change this!
@@ -236,6 +249,15 @@ public class SchedulerSimulation {
             System.out.println(Colors.BRIGHT_WHITE + "]" + Colors.RESET);
             System.out.println(Colors.BOLD + Colors.MAGENTA + "└" + "─".repeat(79) + Colors.RESET + "\n");
             
+            // Increase waiting time for all processes still in the ready queue
+           for (Thread t : processQueue) {
+            Process p = processMap.get(t);
+            p.waitingTime += timeQuantum;   // Add one time quantum to waiting time
+            }
+            
+            // Increment context switch counter when a new process starts running
+            contextSwitchCount++;
+            
             // Start the thread, which will run the process for one time quantum
             currentThread.start();
             
@@ -295,5 +317,16 @@ public class SchedulerSimulation {
                           Colors.RESET + Colors.BLUE + " added to ready queue" + Colors.RESET + 
                           " │ Burst time: " + Colors.YELLOW + process.getBurstTime() + "ms" + 
                           Colors.RESET);
+        
+        // Display total number of context switches
+        System.out.println("Total context switches: " + contextSwitchCount);
+        int turnaroundTime = process.getWaitingTime() + process.getBurstTime();//to find the turnaround time befor print it 
+        // Print the (Process Name, Burst Time, Waiting Time and Turnaround Time (Waiting + Burst)) for this process
+        System.out.println(
+             "Process: " + process.getName() +
+             " | Burst: " + process.getBurstTime() + "ms" +
+             " | Waiting: " + process.getWaitingTime() + "ms" +
+             " | Turnaround: " + turnaroundTime + "ms");
+        System.out.println("Final report generated at: " + System.currentTimeMillis() + " ms");
     }
 }
