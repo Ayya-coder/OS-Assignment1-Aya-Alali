@@ -164,29 +164,29 @@ After that, I linked my VS Code with my GitHub account, which made it easy to te
 
 ---
 
-### Entry 3 - [Date and Time]
-**What I did**:
+### Entry 3 - [September 30 2026, 5:00 PM]
+**What I did**: Started working on Part 3 of the assignment (preparing only).
 
-**Details**:
+**Details**: I started with the first section where I wrote what I did during the previous days. After that, I read the questions in the second section and start answer them and choose the best answers for each one.
 
-**Challenges**:
+**Challenges**: I didn’t have enough information to answer some of the questions, so I had to review the chapters we studied earlier.
 
-**Solution**:
+**Solution**: I read the slides along with some external sources, and I answered the questions using all the information I gathered and I wrote my answers first in a separate draft to make sure everything was clear before adding them to the final file.
 
-**Time spent**:
+**Time spent**: 12 hours (spent between reading and writing)
 
 ---
 
-### Entry 4 - [Date and Time]
-**What I did**:
+### Entry 4 - [October 1 2026, 12:30 PM]
+**What I did**: Completed all the sections of Part 3 in the MY_WORK.md file.
 
-**Details**:
+**Details**: I started the actual work on Part 3 by moving everything from my draft into the final MY_WORK.md file. Since I had already prepared the answers earlier, I focused on organizing them and making sure each section was written clearly. I added the development log, the reflection answers, and the technical questions in their proper places.
 
-**Challenges**:
+**Challenges**: Even though I already had all my answers written in a draft, I still had to double‑check the formatting and make sure each section was organized correctly. I also spent some time reviewing the sentences to make sure they were clear and matched the required.
 
-**Solution**:
+**Solution**: I went through the draft again, fixed the formatting, and organized everything before adding it to the final file. Since the content was already prepared, finishing this part was easy and didn’t take much effort.
 
-**Time spent**:
+**Time spent**: 2 hours
 
 ---
 
