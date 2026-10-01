@@ -292,6 +292,10 @@ public class SchedulerSimulation {
                 }
             }
 int turnaroundTime = process.getWaitingTime() + process.getBurstTime(); //to find the turnaround time befor print it
+            System.out.println("Process: " + process.getName());
+System.out.println("Burst Time: " + process.getBurstTime() + "ms");
+System.out.println("Waiting Time: " + process.getWaitingTime() + "ms");
+System.out.println("Turnaround Time: " + turnaroundTime + "ms");
         }
         // printing the final table 
 System.out.println("\n================ Final Report ================");
