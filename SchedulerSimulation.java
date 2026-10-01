@@ -292,18 +292,27 @@ public class SchedulerSimulation {
                 }
             }
 int turnaroundTime = process.getWaitingTime() + process.getBurstTime(); //to find the turnaround time befor print it
-// Print the (Process Name, Burst Time, Waiting Time and Turnaround Time (Waiting + Burst)) for this process
-System.out.println(
-    "Process: " + process.getName() +
-    " | Burst: " + process.getBurstTime() + "ms" +
-    " | Waiting: " + process.getWaitingTime() + "ms" +
-    " | Turnaround: " + turnaroundTime + "ms"
-);
-
-System.out.println("Final report generated at: " + System.currentTimeMillis() + " ms");
-
         }
-        
+        // printing the final table 
+System.out.println("\n================ Final Report ================");
+System.out.println("Generated at: " + System.currentTimeMillis() + " ms\n");
+
+System.out.printf("%-12s %-12s %-15s %-15s\n",
+        "Process", "BurstTime", "WaitingTime", "TurnaroundTime");
+
+// Loop through all processes in the map
+for (Process p : processMap.values()) {
+    int burst = p.getBurstTime();
+    int waiting = p.getWaitingTime();
+    int turnaround = waiting + burst;
+
+    System.out.printf("%-12s %-12d %-15d %-15d\n",
+            p.getName(), burst, waiting, turnaround);
+}
+
+System.out.println("\nTotal Context Switches: " + contextSwitchCount);
+System.out.println("==============================================");
+
         // End of the scheduler simulation
         System.out.println(Colors.BOLD + Colors.BRIGHT_GREEN + 
                           "╔════════════════════════════════════════════════════════════════════════════════╗" + 
