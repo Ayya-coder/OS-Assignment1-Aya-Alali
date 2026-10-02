@@ -350,11 +350,13 @@ In Round-Robin scheduling, if a process doesn’t finish within its time quantum
 
 Example from my output:
 
-![image](https://github.com/user-attachments/assets/db1a9a70-4d59-43bc-9a80-5583fd376ac6)
+<img width="308" height="82" alt="Screenshot 2026-10-02 121417" src="https://github.com/user-attachments/assets/74b707dc-edce-4103-8b90-ddd421af3c80" />
 
-![Screenshot 2026-10-02 121438](https://github.com/user-attachments/assets/53339ba1-a851-4c66-af62-d57aed660ea3)
 
-![Screenshot 2026-10-02 121504](https://github.com/user-attachments/assets/b7c76591-a32f-435f-bf6a-7529c97e47df)
+<img width="403" height="109" alt="Screenshot 2026-10-02 121438" src="https://github.com/user-attachments/assets/53339ba1-a851-4c66-af62-d57aed660ea3" />
+
+
+<img width="238" height="124" alt="Screenshot 2026-10-02 121504" src="https://github.com/user-attachments/assets/b7c76591-a32f-435f-bf6a-7529c97e47df" />
 
 
 
