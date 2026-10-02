@@ -349,12 +349,14 @@ A process is a full program with its own memory space, while a thread is a small
 In Round-Robin scheduling, if a process doesn’t finish within its time quantum, it gets re‑queued so other processes can also run. In my output, process P3 was added back to the ready queue two times before it finally finished execution. This happened because its burst time (8004ms) was larger than the time quantum, so it needed multiple cycles to complete. Re‑queueing is important because it ensures fairness by giving every process an equal chance to use the CPU. My simulation clearly shows this behavior through the repeated lines: P3 added to ready queue.
 
 Example from my output:
-```
-<img width="632" height="47" alt="image" src="https://github.com/user-attachments/assets/db1a9a70-4d59-43bc-9a80-5583fd376ac6" />
-<img width="403" height="109" alt="Screenshot 2026-10-02 121438" src="https://github.com/user-attachments/assets/53339ba1-a851-4c66-af62-d57aed660ea3" />
-<img width="238" height="124" alt="Screenshot 2026-10-02 121504" src="https://github.com/user-attachments/assets/b7c76591-a32f-435f-bf6a-7529c97e47df" />
 
-```
+![image](https://github.com/user-attachments/assets/db1a9a70-4d59-43bc-9a80-5583fd376ac6)
+
+![Screenshot 2026-10-02 121438](https://github.com/user-attachments/assets/53339ba1-a851-4c66-af62-d57aed660ea3)
+
+![Screenshot 2026-10-02 121504](https://github.com/user-attachments/assets/b7c76591-a32f-435f-bf6a-7529c97e47df)
+
+
 
 **Explanation of example:**
 [Explain what is happening in the output snippet you pasted.]
