@@ -130,7 +130,7 @@
 ## Your Development Log
 
 ### Entry 1 - [September 27 2026, 9:00 PM]
-**What I did**: Forked the repository and set up my ID (445052784)
+**What I did**: Create my account and forked the repository and set up my ID (445052784)
 
 **Details**: 1- I created my GitHub account using my university email.
 2- I forked the repository and renamed it with my own name.
@@ -141,7 +141,7 @@
 
 **Solution**: I created my account and watched a short video about how to fork a repository, and it turned out to be really simple.
 
-**Time spent**: around 30 minutes.
+**Time spent**: 40 minutes.
 
 ---
 
@@ -246,7 +246,12 @@ After that, I linked my VS Code with my GitHub account, which made it easy to te
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+1- I learned that multithreading allows the program to run multiple tasks at the same time, which makes the simulation feel more realistic.
+2- I understood how each thread represents a process, and creating a thread is basically giving that process its own mini CPU time.
+3- I noticed that threads need to wait for each other using join(), and this waiting is important so the scheduler doesn’t jump ahead before a process finishes its quantum.
+4- Using Thread.sleep() helped me simulate real execution time, and it made the output look like an actual CPU running tasks step by step.
+5- I learned that threads can pause, continue, or be re‑queued depending on their remaining time, which shows how Round Robin keeps fairness.
+6- It was interesting to see how context switches increase every time a new thread starts running, just like a real operating system.
 
 ## Question 2: What was the most challenging part of this assignment?
 
@@ -254,7 +259,13 @@ After that, I linked my VS Code with my GitHub account, which made it easy to te
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+1- The most challenging part of this assignment for me was writing and testing the code, especially because I didn’t have VS Code installed at the beginning.
+2- I had to install VS Code and the JDK first, and this took extra time because I wasn’t familiar with the setup.
+3- Every time I changed something in the code, I had to run the simulation again to make sure the output was correct, which made the process a bit tiring.
+4- It was also challenging to understand how each thread behaves, especially when processes get re‑queued and the waiting time keeps increasing.
+5- I had to double‑check the results for each process to make sure the waiting time and turnaround time were calculated correctly.
+6- Another challenge was reading the long output and trying to track which process was running, yielding, or finishing.
+7- Even though it was difficult, I learned a lot about multithreading, thread creation, and how simulations work step by step.
 
 ## Question 3: How did you overcome the challenges you faced?
 
@@ -262,7 +273,13 @@ After that, I linked my VS Code with my GitHub account, which made it easy to te
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+1- I overcame the challenges mainly by testing my code step by step instead of trying to fix everything at once.
+2- Since I didn’t have VS Code at the beginning, I installed it and set up the JDK properly so I could run the simulation without errors.
+3- I re-read the README and the assignment instructions more than once to make sure I understood what each part was asking for.
+4- I added System.out.println statements in different places to debug the output and see exactly what each thread was doing.
+5- Every time I changed something, I ran the program again to confirm the results and check if the waiting time and turnaround time were correct.
+6- I also asked for help when I wasn’t sure about the behavior of the ready queue or the context switches.
+7- Breaking the work into small tasks made the whole assignment easier and helped me understand multithreading step by step.
 
 ## Question 4: How can you apply multithreading concepts in real-world applications?
 
@@ -270,19 +287,34 @@ After that, I linked my VS Code with my GitHub account, which made it easy to te
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+1- Multithreading is used in web browsers to load multiple tabs at the same time without freezing the whole application.
+2- Games rely on multithreading to handle movement, physics, sound, and rendering all at once to keep the gameplay smooth.
+3- Mobile apps use threads to keep the interface responsive while loading data in the background, similar to how our scheduler runs processes.
+4- Music players use one thread to play audio while another thread searches for the next song or updates the playlist.
+5- Messaging apps use threads to receive new messages instantly while the user continues typing or scrolling.
+6- Operating systems use multithreading to manage CPU tasks, which is exactly what our Round Robin simulation represents.
+7- Multithreading helps real applications stay fast, responsive, and able to handle many tasks at the same time.
 
 ### Optional: What would you like to learn more about?
 
 [Any topics related to threading or operating systems that you're curious about?]
 
+I’m curious about how the idea of threading was discovered for the first time and what problem made computer scientists think about it. I want to learn who was the first person or team that decided to replace traditional processes with threads to make programs faster and more efficient also It’s interesting to me how they realized that splitting a program into smaller units of execution could improve performance and responsiveness. I also want to understand the early experiments they did and how operating systems evolved to support multithreading. I’d like to explore the history behind threading and how it became a fundamental part of modern computing.
+
 ### Optional: How confident do you feel about multithreading concepts now?
 
 [Beginner / Intermediate / Confident. What do you understand well? What needs more practice?]
 
+I would say I feel at an intermediate level with multithreading concepts. I understand the basic ideas like how threads run in parallel and how the scheduler switches between them. I also feel comfortable reading the output and understanding when a thread is running, waiting, or finishing. But I still need more practice with the actual thread methods, especially knowing when to use start() and when run() is appropriate. I want to get better at choosing the right place to call each method so the simulation behaves correctly. I also need more experience with debugging thread behavior because sometimes the timing can be confusing.
+Overall, I understand the concepts well, but I need more hands‑on practice to feel fully confident
+
 ### Optional: Feedback on the assignment
 
 [Any comments? Was it helpful? Too easy or hard? Suggestions?]
+
+I think this assignment was medium difficulty not impossible, but it definitely required a deep understanding of threads.
+It made me realize how important multithreading is in operating systems and why we need to understand how processes and threads work. The task was useful for the future because it connects directly to real OS concepts instead of just theory.
+So for me it was a helpful assignment that pushed me to learn more.
 
 ---
 
@@ -302,7 +334,7 @@ After that, I linked my VS Code with my GitHub account, which made it easy to te
 
 **Your Answer:** *(3-5 sentences)*
 
-[Write your answer here.]
+A process is a full program with its own memory space, while a thread is a smaller unit of execution that runs inside a process and shares the same memory. In our assignment, the class named Process is only a simulated process, but the actual execution happens through real Java threads. We used threads because they are much lighter and faster to create than real operating system processes, and they can easily share data like the ready queue and waiting times. I can see this clearly in my code where each simulated process is wrapped inside a real thread using new Thread(process) inside addProcessToQueue(). Using threads made the scheduler simulation smoother and avoided the heavy overhead of creating multiple OS‑level processes.
 
 ## Question 2: Ready Queue Behavior
 
@@ -314,15 +346,20 @@ After that, I linked my VS Code with my GitHub account, which made it easy to te
 
 **Your Answer:** *(3-5 sentences)*
 
-[Write your answer here.]
+In Round-Robin scheduling, if a process doesn’t finish within its time quantum, it gets re‑queued so other processes can also run. In my output, process P3 was added back to the ready queue two times before it finally finished execution. This happened because its burst time (8004ms) was larger than the time quantum, so it needed multiple cycles to complete. Re‑queueing is important because it ensures fairness by giving every process an equal chance to use the CPU. My simulation clearly shows this behavior through the repeated lines: P3 added to ready queue.
 
 Example from my output:
 ```
-[Paste a relevant snippet from your program output here showing a process being re-queued]
+<img width="632" height="47" alt="image" src="https://github.com/user-attachments/assets/db1a9a70-4d59-43bc-9a80-5583fd376ac6" />
+<img width="403" height="109" alt="Screenshot 2026-10-02 121438" src="https://github.com/user-attachments/assets/53339ba1-a851-4c66-af62-d57aed660ea3" />
+<img width="238" height="124" alt="Screenshot 2026-10-02 121504" src="https://github.com/user-attachments/assets/b7c76591-a32f-435f-bf6a-7529c97e47df" />
+
 ```
 
 **Explanation of example:**
 [Explain what is happening in the output snippet you pasted.]
+
+The output shows that P3 was added back to the ready queue because it didn’t finish within its time quantum. Its burst time was large, so the scheduler paused it and re‑queued it to give other processes a turn. Later, the output shows P3 finished execution, meaning it completed after several cycles.
 
 ## Question 3: Thread Lifecycle
 
@@ -333,14 +370,21 @@ Example from my output:
 **Your Answer:** *(3-5 sentences overall; one short explanation per state)*
 
 1. **New**: [When is P1 in the New state?]
-
+P1 is in the New state right after its thread is created with new Thread(process) inside addProcessToQueue().
+(we can see this in line 337 in my code as (Thread thread = new Thread(process);)).
 2. **Runnable**: [When does P1 become Runnable?]
-
+P1 becomes Runnable when thread.start() is called in the scheduler loop.
+(we can see this in line 268 in me code as (currentThread.start();)).
 3. **Running**: [When is P1 Running?]
-
+P1 is Running when the CPU actually starts executing its run() method.
+(we can see this in line 46 in my code as ( public void run() )). 
 4. **Waiting**: [When and why would a thread be Waiting?]
-
-5. **Terminated**: [When is P1 Terminated?]
+P1’s thread enters the Waiting state when it calls Thread.sleep(timeQuantum) inside run() and currentThread.join() P1’s thread is temporarily paused, waiting for the sleep duration to finish before it can become Runnable again.
+(we can see this in line 120 in my code as (Thread.sleep(remainingTime);)
+also in line 272 as currentThread.join();). 
+6. **Terminated**: [When is P1 Terminated?]
+P1 is Terminated when its run() method finishes all remaining burst time and returns.
+(we can see this in line 123 as its printing " finished execution!" Here).
 
 ## Question 4: Real-World Applications
 
@@ -350,32 +394,36 @@ Example from my output:
 
 **Your Answer:** *(3-5 sentences per example)*
 
-### Example 1 (operating-system level): [Name of scenario]
+### Example 1 (operating-system level): Thread Scheduling in a Multitasking OS.
 
 **Description**:
-[Describe the real-world scenario.]
+In a modern operating system, each running application contains multiple threads for example, a browser has a rendering thread, a networking thread, and a JavaScript execution thread. The OS scheduler gives each thread a small time quantum to run on the CPU. If a thread doesn’t finish its work during that quantum, the OS performs a context switch and moves the CPU to the next thread in the ready queue.
 
 **Why Round-Robin works well here**:
-[Fairness, responsiveness, predictability?]
+Round-Robin ensures fairness, because every thread receives equal CPU time without starvation. It improves responsiveness, since threads return to the CPU quickly in the next cycle. It also provides predictability, because each thread knows it will be scheduled again after a fixed and regular interval.
 
-### Example 2: [Name of application/scenario]
+In my simulation terms: each thread representing a (process) gets a quantum, yields, and re-enters the ready queue until it finishes.
+
+### Example 2: Game Server Handling Multiple Player Actions
 
 **Description**:
-[Describe the real-world scenario or application.]
+In an online multiplayer game, the server receives many player actions at the same time like movement updates, attack commands, chat messages, and inventory changes. Each action can be handled by a separate thread, and the server gives each thread a small time slice to process part of the request before switching to the next one.
 
 **Why Round-Robin works well here**:
-[Fairness, responsiveness, predictability?]
+Round-Robin ensures fairness, so no single player’s actions dominate the server. It improves responsiveness, because every player gets frequent updates instead of waiting behind long tasks. It also provides predictability, since the server processes player actions in a regular cycle, preventing lag spikes or sudden delays.
+
+In my simulation terms: each player action is a (process) the time quantum is the slice used to update the game state, and the context switch is when the server moves to the next player’s thread.
 
 ## Summary
 
 **Key concepts I understood through these questions:**
-1.
-2.
-3.
+1. The difference between a thread and a process, and how threads share the same memory space while processes are isolated.
+2. How the ready queue works in Round‑Robin scheduling: processes wait in FIFO order, each receives a fixed time quantum, and unfinished ones re‑enter the queue.
+3. The full thread lifecycle (New, Runnable, Running, Waiting, Terminated) and how each state appears in my code through new Thread(), start(), run(), sleep(), and join().
 
 **Concepts I need to study more:**
-1.
-2.
+1. How operating systems perform context switching internally and how thread scheduling differs from process scheduling in real kernels.
+2. The deeper behavior of thread methods (sleep, join, start) and how they affect timing, synchronization, and state transitions in more complex programs.
 
 ---
 
