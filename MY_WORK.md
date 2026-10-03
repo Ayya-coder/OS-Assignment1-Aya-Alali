@@ -39,7 +39,7 @@
 
 ## 🎥 Video Link
 
-**Video Link**: [Paste your video link here]
+**Video Link**:(https://drive.google.com/file/d/10ErlmDERvEUirD6zY3pH9P9qqLRjQ4Jd/view?usp=sharing)
 
 > ⚠️ **WARNING:** The video must be **publicly accessible** ("Anyone with the link can view") on **Google Drive**, **YouTube (Unlisted or Public)** or any other cloud file-sharing system. A private, restricted or broken link counts as a **missing video (-1 mark)**.
 >
@@ -190,29 +190,37 @@ After that, I linked my VS Code with my GitHub account, which made it easy to te
 
 ---
 
-### Entry 5 - [Date and Time]
-**What I did**:
+### Entry 5 - [October 3 2026, 2:10 PM]
+**What I did**: recorded the required 2–3 minute video demonstration for Part 4 of the assignment.
 
-**Details**:
+**Details**: 1- Showed my public GitHub repository and verified my university email.
+2- Navigated through my project files and highlighted the three modifications: priority, context switches, and waiting time.
+3- Opened my IDE, ran SchedulerSimulation.java, and showed the console output with my student ID and simulation parameters.
+4- Explained the Thread.start() concept using my own code example.
+5- Displayed my commit history at the end of the video.
 
-**Challenges**:
+**Challenges**: The video duration was very strict, and fitting all required sections into only 2–3 minutes was difficult.
 
-**Solution**:
+**Solution**: I practiced the script several times to speak more smoothly and faster, and I shortened my explanations to cover everything without exceeding the time limit.
 
-**Time spent**:
+**Time spent**: 1 hour
 
 ---
 
-### Entry 6 - [Optional - Date and Time]
-**What I did**:
+### Entry 6 - [October 3 2026, 3:30 PM]
+**What I did**: submitted my assignment through Blackboard by uploading my GitHub repository link.
 
-**Details**:
+**Details**: 1- The submission only required pasting the public GitHub repository link.
+2- I verified that my repository was public before submitting.
+3- I checked that the link opened correctly and displayed all my files.
+4- The process did not require uploading any files or videos directly to Blackboard.
+5- The submission page accepted the link without any formatting issues.
 
-**Challenges**:
+**Challenges**: There were no major challenges; the submission process was very simple.
 
-**Solution**:
+**Solution**: I only made sure the repository was public and copied the correct link to avoid any access problems.
 
-**Time spent**:
+**Time spent**: Less than 10 minutes
 
 ---
 
@@ -220,13 +228,13 @@ After that, I linked my VS Code with my GitHub account, which made it easy to te
 
 > 💡 **TIP:** Fill this in **last**, after all entries are written.
 
-**Total time spent on assignment**: [X hours]
+**Total time spent on assignment**: around 26 hours.
 
-**Most challenging part**:
+**Most challenging part**: The most challenging part for me was Part 2 (the coding section). I struggled with fixing the errors, understanding the thread behavior, and making sure the output matched the required format.
 
-**Most interesting learning**:
+**Most interesting learning**: The most interesting part was Part 3, because it helped me learn new concepts and understand threading in a clearer way. Writing the explanations and connecting them to my own code made me understand how scheduling and thread states actually work.
 
-**What I would do differently next time**:
+**What I would do differently next time**: Next time, I would focus on the details from the beginning and divide the assignment into smaller parts across several days. Working in organized sections instead of randomly would make the whole process easier and less stressful.
 
 ---
 
@@ -388,7 +396,7 @@ P1’s thread enters the Waiting state when it calls Thread.sleep(timeQuantum) i
 also in line 272 as currentThread.join();). 
 6. **Terminated**: [When is P1 Terminated?]
 P1 is Terminated when its run() method finishes all remaining burst time and returns.
-(we can see this in line 123 as its printing " finished execution!" Here).
+(we can see this in line 123 as its printing " finished execution!").
 
 ## Question 4: Real-World Applications
 
